@@ -1,4 +1,4 @@
-from clave_a import (
+from clave_a_modif import (
     suma,
     sumaPares,
     areaTotalCilindro,
@@ -12,7 +12,7 @@ print("Clave A...")
 
 
 # ejercicio 1 -->
-result = suma()
+result = suma(2, 4)
 if result == 6:
     print("ejercicio01: pass")
 else:
@@ -28,7 +28,7 @@ else:
 
 
 # ejercicio 3 -->
-result = areaTotalCilindro()
+result = areaTotalCilindro(5, 7)
 if result == 376.99:
     print("ejercicio03: pass")
 else:
@@ -36,7 +36,7 @@ else:
 
 
 # ejercicio 4 -->
-cilindro1 = Cilindro()
+cilindro1 = Cilindro(5, 7)
 result = cilindro1.areaTotalCilindro()
 if result == 376.99:
     print("ejercicio04: pass")
@@ -46,13 +46,12 @@ else:
 
 # ejercicio 5 -->
 Restaurante = Restaurante()
-# Restaurante.ordenar(Pizza("suprema", "san salvador", 4.99, True, 0.99))
-# Restaurante.ordenar(Pizza("hawaiana", "la lipertad", 5.99, False, 0.00))
-# Restaurante.ordenar(Pizza("meat lovers", "san salvador", 6.99, True, 0.99))
-# Restaurante.ordenar(Pizza("hawaiana", "san salvador", 5.99, True, 1.99))
-# Restaurante.ordenar(Pizza("cuatro quesos", "santa ana", 3.99, False, 0.00))
-# Restaurante.ordenar(Pizza("super suprema", "la libertad", 7.99, True, 2.99))
-Restaurante.ordenar()
+Restaurante.ordenar(Pizza("suprema", "san salvador", 4.99, True, 0.99))
+Restaurante.ordenar(Pizza("hawaiana", "la lipertad", 5.99, False, 0.00))
+Restaurante.ordenar(Pizza("meat lovers", "san salvador", 6.99, True, 0.99))
+Restaurante.ordenar(Pizza("hawaiana", "san salvador", 5.99, True, 1.99))
+Restaurante.ordenar(Pizza("cuatro quesos", "santa ana", 3.99, False, 0.00))
+Restaurante.ordenar(Pizza("super suprema", "la libertad", 7.99, True, 2.99))
 costoTotal = Restaurante.costoTotal()
 if costoTotal == "$35.94":
     print("ejercicio05part01: pass")
