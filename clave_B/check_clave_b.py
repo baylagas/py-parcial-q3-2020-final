@@ -1,4 +1,4 @@
-from clave_b import (
+from clave_b_modif import (
     suma,
     sumaImpares,
     definicionEsfera,
@@ -12,7 +12,7 @@ print("Clave B...")
 
 
 # ejercicio 1 -->
-result = suma()
+result = suma(2, 4, 6)
 if result == 12:
     print("ejercicio01: pass")
 else:
@@ -28,7 +28,7 @@ else:
 
 
 # ejercicio 3 -->
-result = definicionEsfera()
+result = definicionEsfera(12)
 if result == {
     "perimetro": 75.39822368615503,
     "area": 1809.5573684677208,
@@ -40,7 +40,7 @@ else:
 
 
 # ejercicio 4 -->
-esfera = Esfera()
+esfera = Esfera(12)
 result = esfera.definicionEsfera()
 if result == {
     "perimetro": 75.39822368615503,
@@ -53,14 +53,13 @@ else:
 
 # ejercicio 5 -->
 banco = Banco()
-# banco.procesar(Cliente("balbino", "san salvador", 1, "abono", 250.0))
-# banco.procesar(Cliente("rodrigo", "san salvador", 2, "retiro", 350.0))
-# banco.procesar(Cliente("marta", "san salvador", 3, "abono", 400.0))
-# banco.procesar(Cliente("rafael", "santa ana", 4, "abono", 500.0))
-# banco.procesar(Cliente("balbino", "la libertad", 1, "abono", 250.0))
-# banco.procesar(Cliente("marta", "san salvador", 3, "abono", 250.0))
-# banco.procesar(Cliente("rodrigo", "san salvador", 2, "abono", 100.0))
-banco.procesar()
+banco.procesar(Cliente("balbino", "san salvador", 1, "abono", 250.0))
+banco.procesar(Cliente("rodrigo", "san salvador", 2, "retiro", 350.0))
+banco.procesar(Cliente("marta", "san salvador", 3, "abono", 400.0))
+banco.procesar(Cliente("rafael", "santa ana", 4, "abono", 500.0))
+banco.procesar(Cliente("balbino", "la libertad", 1, "abono", 250.0))
+banco.procesar(Cliente("marta", "san salvador", 3, "abono", 250.0))
+banco.procesar(Cliente("rodrigo", "san salvador", 2, "abono", 100.0))
 # total de abonos en san salvador
 totalAbonos = banco.abonosSanSalvador()
 if totalAbonos == 1000.0:
