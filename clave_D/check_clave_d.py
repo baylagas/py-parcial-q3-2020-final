@@ -1,4 +1,4 @@
-from clave_d import (
+from clave_d_modif import (
     multiplicar,
     sumaDivTresYCincoPlus,
     definicionOrtoedro,
@@ -12,7 +12,7 @@ print("Clave D...")
 
 
 # ejercicio 1 -->
-result = multiplicar()
+result = multiplicar(2, 4, 3)
 if result == 24:
     print("ejercicio01: pass")
 else:
@@ -28,7 +28,7 @@ else:
 
 
 # ejercicio 3 -->
-result = definicionOrtoedro()
+result = definicionOrtoedro(10, 6, 5)
 if result == {"area": 280, "volumen": 300}:
     print("ejercicio03: pass")
 else:
@@ -36,7 +36,7 @@ else:
 
 
 # ejercicio 4 -->
-ortoedro = Ortoedro()
+ortoedro = Ortoedro(10, 6, 5)
 result = ortoedro.definicionOrtoedro()
 if result == {"area": 280, "volumen": 300}:
     print("ejercicio04: pass")
@@ -46,26 +46,24 @@ else:
 
 # ejercicio 5 -->
 ventaCompus = VentaComputadoras()
-# ventaCompus.orden(
-#     Computadora("intel", "16gb", "nvidia", "240gb", 700.0, False, 0.0, False, 0.0)
-# )
-# ventaCompus.orden(
-#     Computadora("amd", "16gb", "nvidia", "512gb", 750.0, True, 20.0, False, 0.0)
-# )
-# ventaCompus.orden(
-#     Computadora("intel", "8gb", "nvidia", "240gb", 700.0, False, 0.0, False, 0.0)
-# )
-# ventaCompus.orden(
-#     Computadora("amd", "16gb", "nvidia", "512gb", 700.0, True, 50.0, False, 0.0)
-# )
-# ventaCompus.orden(
-#     Computadora("intel", "16gb", "nvidia", "1Tb", 700.0, True, 70.0, False, 0.0)
-# )
-# ventaCompus.orden(
-#     Computadora("intel", "32gb", "nvidia", "2Tb", 900.0, False, 0.0, False, 0.0)
-# )
-# ejemplos
-ventaCompus.orden()
+ventaCompus.orden(
+    Computadora("intel", "16gb", "nvidia", "240gb", 700.0, False, 0.0, False, 0.0)
+)
+ventaCompus.orden(
+    Computadora("amd", "16gb", "nvidia", "512gb", 750.0, True, 20.0, False, 0.0)
+)
+ventaCompus.orden(
+    Computadora("intel", "8gb", "nvidia", "240gb", 700.0, False, 0.0, False, 0.0)
+)
+ventaCompus.orden(
+    Computadora("amd", "16gb", "nvidia", "512gb", 700.0, True, 50.0, False, 0.0)
+)
+ventaCompus.orden(
+    Computadora("intel", "16gb", "nvidia", "1Tb", 700.0, True, 70.0, False, 0.0)
+)
+ventaCompus.orden(
+    Computadora("intel", "32gb", "nvidia", "2Tb", 900.0, False, 0.0, False, 0.0)
+)
 result = ventaCompus.totalProcesadorIntel()
 if result == "$3000.00":
     print("ejercicio05part01: pass")
