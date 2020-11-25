@@ -1,4 +1,4 @@
-from clave_c import (
+from clave_c_modif import (
     multiplicar,
     sumaDivTresYCinco,
     definicionCono,
@@ -12,7 +12,7 @@ print("Clave C...")
 
 
 # ejercicio 1 -->
-result = multiplicar()
+result = multiplicar(2, 4)
 if result == 8:
     print("ejercicio01: pass")
 else:
@@ -28,7 +28,7 @@ else:
 
 
 # ejercicio 3 -->
-result = definicionCono()
+result = definicionCono(5, 11)
 if result == {
     "generatriz": 12.083045973594572,
     "area": 268.33985865790703,
@@ -40,7 +40,7 @@ else:
 
 
 # ejercicio 4 -->
-cono = Cono()
+cono = Cono(5, 11)
 result = cono.definicionCono()
 if result == {
     "generatriz": 12.083045973594572,
@@ -54,16 +54,15 @@ else:
 
 # ejercicio 5 -->
 centroMedico = CentroMedico()
-# centroMedico.registrar(Paciente("balbino", "san salvador", "gripe", 40.0, False, 0.0))
-# centroMedico.registrar(Paciente("marta", "santa ana", "dolor cabeza", 30.0, True, 5.0))
-# centroMedico.registrar(Paciente("rodrigo", "san salvador", "golpe", 50.0, False, 0.0))
-# centroMedico.registrar(Paciente("jaime", "la libertad", "gripe", 40.0, True, 10.0))
-# centroMedico.registrar(
-#     Paciente("balbino", "la libertad", "dol estomago", 30.0, False, 0.0)
-# )
-# centroMedico.registrar(Paciente("marta", "san salvador", "mareo", 20.0, True, 5.0))
-# centroMedico.registrar(Paciente("karen", "san salvador", "gripe", 40.0, False, 0.0))
-# ejemplos
+centroMedico.registrar(Paciente("balbino", "san salvador", "gripe", 40.0, False, 0.0))
+centroMedico.registrar(Paciente("marta", "santa ana", "dolor cabeza", 30.0, True, 5.0))
+centroMedico.registrar(Paciente("rodrigo", "san salvador", "golpe", 50.0, False, 0.0))
+centroMedico.registrar(Paciente("jaime", "la libertad", "gripe", 40.0, True, 10.0))
+centroMedico.registrar(
+    Paciente("balbino", "la libertad", "dol estomago", 30.0, False, 0.0)
+)
+centroMedico.registrar(Paciente("marta", "san salvador", "mareo", 20.0, True, 5.0))
+centroMedico.registrar(Paciente("karen", "san salvador", "gripe", 40.0, False, 0.0))
 result = centroMedico.totalCostoSanSalvador()
 if result == "$150.00":
     print("ejercicio05part01: pass")
